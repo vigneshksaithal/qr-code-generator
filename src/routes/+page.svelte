@@ -61,15 +61,14 @@
 
 <style>
 	article {
+		width: 100%;
 		max-width: 480px;
 		margin: 0 auto;
 	}
 
 	canvas {
 		display: block;
-		max-width: 160px;
-		margin: 1em auto;
-		border: 2px solid #ccc;
+		margin: 0 auto 1em;
 		border-radius: 8px;
 	}
 
