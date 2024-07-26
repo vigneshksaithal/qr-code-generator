@@ -11,6 +11,11 @@
 	onMount(() => {
 		createQRCode()
 
+		if (typeof window.Highlight === 'undefined') {
+			console.error('Highlight environment is not available')
+			return
+		}
+
 		Highlight.app.addListener('onContext', (context: HighlightContext) => {
 			console.log('Invoked')
 
@@ -75,7 +80,7 @@
 	.flex {
 		display: flex;
 		flex-direction: column;
-		gap: 1em;
+		gap: 0.8em;
 		justify-content: center;
 	}
 </style>
