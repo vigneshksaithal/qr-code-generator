@@ -1,0 +1,10 @@
+{{#system}}
+List this text "Paste the URL to generate QR code" in a JSON array like this ["title 1"]
+{{/system}}
+
+{{#user}}
+{{#if environment.clipboardText}}
+  The code that is copied right now:
+  {{environment.clipboardText}}
+{{/if}}
+{{/user}}
