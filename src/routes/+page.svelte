@@ -30,11 +30,15 @@
 
 	const createQRCode = async () => {
 		await QRCode.toCanvas(canvasEl, text)
+
+		/**
+		 * Resize the canvas to take full available width
+		 */
 		canvasEl.style.width = '100%'
 		canvasEl.style.height = 'auto'
 	}
 
-	const downloadPNG = async () => {
+	const downloadPNG = () => {
 		canvasEl.toBlob((blob: any) => {
 			saveAs(blob, 'qr-code.png')
 		})
@@ -74,7 +78,6 @@
 	canvas {
 		display: block;
 		margin: 0 auto 1em;
-		border-radius: 8px;
 	}
 
 	.flex {
