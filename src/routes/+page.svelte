@@ -66,6 +66,12 @@
 			<button class="contrast" on:click={downloadSVG}>SVG</button>
 		</div>
 	</div>
+	<footer>
+		<small>
+			A product by Vignesh Aithal. For feature requests
+			<a href="https://tally.so/r/3N0jdb" target="_blank">click here</a>.
+		</small>
+	</footer>
 </article>
 
 <style>
