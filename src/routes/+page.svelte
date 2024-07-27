@@ -77,7 +77,7 @@
 
 	canvas {
 		display: block;
-		margin: 0 auto 1em;
+		margin: 0 auto;
 	}
 
 	.flex {
