@@ -52,40 +52,40 @@ const downloadSVG = async () => {
 </script>
 
 <article>
-	<h1>QR Code Generator</h1>
-	<label for="QR Code text">Enter your URL</label>
-	<input type="text" bind:value={text} on:input={createQRCode} />
+	<header>
+		<h1>QR Code Generator</h1>
+		<p>
+			Invoke the app via Highlight chat, paste the link in the chat for instant
+			QR code.
+		</p>
+	</header>
 	<div class="grid">
-		<canvas bind:this={canvasEl} style="width: 100%;" />
-		<div class="flex">
-			<button class="contrast" on:click={downloadPNG}>PNG</button>
-			<button class="contrast" on:click={downloadSVG}>SVG</button>
-		</div>
+		<canvas bind:this={canvasEl} />
 	</div>
-	<footer>
-		<small>
-			For feature requests
-			<a href="https://tally.so/r/3N0jdb" target="_blank">click here</a>.
-		</small>
+	<input type="text" bind:value={text} on:input={createQRCode} />
+	<footer class="grid">
+		<button class="contrast" on:click={downloadPNG}>PNG</button>
+		<button class="contrast" on:click={downloadSVG}>SVG</button>
 	</footer>
 </article>
 
 <style>
 article {
 	width: 100%;
-	max-width: 480px;
+	max-width: 400px;
 	margin: 0 auto;
 }
 
 canvas {
 	display: block;
-	margin: 0 auto;
+	margin: 0 auto 1em;
+	max-width: 200px;
+	padding: 0em;
+	border: 2px solid #e2e8f0;
+	border-radius: 6px;
 }
 
-.flex {
-	display: flex;
-	flex-direction: column;
-	gap: 0.8em;
-	justify-content: center;
+input {
+	margin: 0;
 }
 </style>
