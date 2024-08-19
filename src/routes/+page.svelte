@@ -4,7 +4,7 @@ import { saveAs } from 'file-saver'
 import QRCode from 'qrcode'
 import { onMount } from 'svelte'
 
-let text = 'https://google.com'
+let text = 'https://highlight.ing'
 let canvasEl: HTMLCanvasElement
 let suggestion = ''
 
